@@ -40,3 +40,24 @@ function avg(numbArr){
     return sum/numbArr.length
 }
 console.log(avg(numbs));
+
+let stringArray = ['say', 'hello', 'in', 'supercalifragilisticexpialidocious', 'morning']
+function longestString (arr,) {
+let result = "";
+for (let i = 0; i < arr.length; i++){
+    if (arr[i].length > result.length){
+    result = arr[i];
+    }
+}return result
+}
+// console.log(longestString(stringArray));
+
+function stringsLongerThan (arr, num){
+let result = [];
+for (let i = 0; i < arr.length; i++){
+    if (arr[i].length > num){
+    result.push (arr[i]);
+    } 
+}return result
+}console.log(stringsLongerThan(stringArray, 7));
+
