@@ -68,7 +68,7 @@ function printNumbers (n){
      return;
     }printNumbers(n-1);
     console.log(n);
-}console.log(printNumbers(5))
+}console.log(printNumbers(10))
 
 let data = [{ id: "42", name: "Bruce", occupation: "Knight", age: "41" }, { id: "48", name: "Barry", occupation: "Runner", age: "25" }, { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" }, { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" }, { id: "7", name: "Bilbo", occupation: "None", age: "111" }]
 
@@ -86,8 +86,13 @@ let nonRetired = data.filter(retire);
 console.log(nonRetired);
 
 
-let newData = data.map(newYearNewJob)
+let newData = data.map(newYearNewJob);
+
 function newYearNewJob(person) {
-    return person.job = person.occupation
+    person.job = person.occupation;
+    delete person.occupation;
+    person.age += 1
+    return person; 
 }
+
 console.log(newData);
