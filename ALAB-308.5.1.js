@@ -1,10 +1,3 @@
-// function sumArray (arr){
-//     let sum = 0;
-//     for (let i = 0; i < sumArray.length; i++){
-//         sum =+ sumArray[i];
-//     }
-// }console.log(sum);
-
 /* 
 sumArray([1,2,3,4])
 
@@ -30,6 +23,14 @@ for (let i = 0; i < num.length; i++){
 }
 console.log(sumofarr(num)); */
 
+function sumArray (arr){
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++){
+        sum += arr[i];        
+    }return sum
+   
+} console.log(sumArray([1,2,3,4]))
+
 
 let numbs = [2,3,1,3,1]
 function avg(numbArr){
@@ -50,7 +51,7 @@ for (let i = 0; i < arr.length; i++){
     }
 }return result
 }
-// console.log(longestString(stringArray));
+console.log(longestString(stringArray));
 
 function stringsLongerThan (arr, num){
 let result = [];
@@ -61,3 +62,18 @@ for (let i = 0; i < arr.length; i++){
 }return result
 }console.log(stringsLongerThan(stringArray, 7));
 
+
+function printNumbers (n){
+    if( n < 1){
+     return;
+    }printNumbers(n-1);
+    console.log(n);
+}console.log(printNumbers(5))
+
+let data = [{ id: "42", name: "Bruce", occupation: "Knight", age: "41" }, { id: "48", name: "Barry", occupation: "Runner", age: "25" }, { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" }, { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" }, { id: "7", name: "Bilbo", occupation: "None", age: "111" }]
+
+function ageSort(personA, personB){
+    return Number(personA.age) - Number(personB.age);
+    
+}data.sort(ageSort)
+console.log(data);

@@ -248,20 +248,19 @@ console.log(power(2, 4));
 
 function sumArray (arr){
     let sum = 0;
-    for (let i = 0; i < sumArray.length; i++){
-        sum =+ sumArray[i];
+    for (let i = 0; i < arr.length; i++){
+        sum += sumArray[i];
     }
-}console.log(sum);
+}
+console.log(sum);
 
 sumArray([1,2,3,4])
 
 function avgArray (arr){
     let sum = 0;
     let avg = 0;
-    for (let i = 0; i < sumArray.length; i++){
-        sum =+ sumArray[i];
+    for (let i = 0; i < arr.length; i++){
+        sum += sumArray[i];
         avg = sum / sumArray.length
     }
-}console.log(avg);
-
-avgArray([1,2,3,4])
+}console.log(avgArray([1,2,3,4]));
