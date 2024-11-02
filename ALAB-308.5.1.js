@@ -94,5 +94,10 @@ function newYearNewJob(person) {
     person.age = Number(person.age) + 1;
     return person
 }
-
 console.log(newData);
+
+let sum1 = newData.reduce(sum, 0)
+
+function sum(accumulator, newData) {
+    return accumulator + Number(newData.age);
+}console.log(sum1);
