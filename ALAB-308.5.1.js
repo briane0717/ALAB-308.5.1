@@ -84,3 +84,10 @@ function retire(person){
 
 let nonRetired = data.filter(retire);
 console.log(nonRetired);
+
+
+let newData = data.map(newYearNewJob)
+function newYearNewJob(person) {
+    return person.job = person.occupation
+}
+console.log(newData);
