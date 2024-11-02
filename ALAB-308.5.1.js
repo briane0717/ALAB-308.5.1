@@ -77,3 +77,10 @@ function ageSort(personA, personB){
     
 }data.sort(ageSort)
 console.log(data);
+
+function retire(person){
+    return Number(person.age) < 50
+}
+
+let nonRetired = data.filter(retire);
+console.log(nonRetired);
