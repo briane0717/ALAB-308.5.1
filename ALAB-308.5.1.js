@@ -91,8 +91,8 @@ let newData = data.map(newYearNewJob);
 function newYearNewJob(person) {
     person.job = person.occupation;
     delete person.occupation;
-    person.age += 1
-    return person; 
+    person.age = String(Number(person.age)) + 1;
+    return person
 }
 
 console.log(newData);
