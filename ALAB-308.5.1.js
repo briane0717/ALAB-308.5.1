@@ -97,7 +97,21 @@ function newYearNewJob(person) {
 console.log(newData);
 
 let sum1 = newData.reduce(sum, 0)
+function sum(accumulator, currentAge) {
+    return accumulator + Number(currentAge.age);
+    
+    
+}
+let avg1 = sum1 / newData.length
+console.log(`The average age is ${avg1} years old`);
 
-function sum(accumulator, newData) {
-    return accumulator + Number(newData.age);
-}console.log(sum1);
+
+function incrementAge(obj) {
+
+    if (!obj.hasOwnProperty('age')) {
+        obj.age = 0;
+    }
+    obj.age += 1;
+    obj.updated_at = new Date();
+    return obj;
+}
