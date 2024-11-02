@@ -113,3 +113,12 @@ function incrementAge(obj) {
     obj.updated_at = new Date();
     return obj;
 }
+function incrementAgeCopy(obj) {
+    let newObj = Object.assign({}, obj);
+    if (!newObj.hasOwnProperty('age')) {
+        newObj.age = 0;
+    }
+    newObj.age += 1;
+    newObj.updated_at = new Date();
+    return newObj;
+}
