@@ -105,9 +105,7 @@ function sum(accumulator, currentAge) {
 let avg1 = sum1 / newData.length
 console.log(`The average age is ${avg1} years old`);
 
-
 function incrementAge(obj) {
-
     if (!obj.hasOwnProperty('age')) {
         obj.age = 0;
     }
